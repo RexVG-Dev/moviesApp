@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>Películas Nuevas</ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- Cuando enviamos datos al componente [variableReceptor]="variableDeEmisor"-->
+  <app-slideshow-backdrop [recentMovies]="recentMovies"></app-slideshow-backdrop>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>Cartelera</ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-slideshow-poster [posterMovies]="recentMovies"></app-slideshow-poster>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>Las películas más populares</ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-slideshow-popular [popularMovies]="listPopular" (cargarMas)="cargarMas()"></app-slideshow-popular>
+</ion-content>

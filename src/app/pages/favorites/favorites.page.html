@@ -1,0 +1,22 @@
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>Favoritos</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <app-slideshow-poster [posterMovies]="listFavorites"></app-slideshow-poster> -->
+
+  <div *ngFor="let category of favByGenre">
+    <ion-grid *ngIf="category.moviesFav.length > 0">
+      <ion-row>
+        <ion-col>{{category.genre}}</ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <app-slideshow-poster [posterMovies]="category.moviesFav" (reloadFavorite)="loadFavorites()"></app-slideshow-poster>
+  </div>
+</ion-content>

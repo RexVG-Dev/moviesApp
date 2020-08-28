@@ -176,3 +176,20 @@
     --color: white;
   }
 }
+
+// Estilos personalizados
+.poster {
+  // width: 220px !important;
+  // height: 320px !important;
+  width: 165px !important;
+  height: 240px !important;
+}
+
+.popular {
+  width: 110px !important;
+  height: 160px !important;
+}
+
+.bg-ion-card {
+  background-color: rgba($color: #000000, $alpha: 0.8);
+}
